@@ -233,14 +233,52 @@ import random
 
 #字符串拼接
 #1.使用+进行拼接
-a = [1,2,3,4]
-b = [5,6,7,8]
-print(a+b)
-#2.使用extend进行拼接
-c = a.extend(b)
-print(a)
-print(b)
-print(c)
-#使用 += 的方式进行拼接
-a += b
-print(a)
+# a = [1, 2, 3, 4]
+# b = [5,6,7,8]
+# print(a+b)
+# #2.使用extend进行拼接
+# c = a.extend(b)
+# print(a)
+# print(b)
+# print(c)
+# #使用 += 的方式进行拼接
+# a += b
+# print(a)
+
+#元组操作
+# a = (1,2,3,4)
+# print(type(a))
+# print(a)
+# print(a[1])
+# print(a[-1])
+# print(a[1:3])
+
+#字典创建,两种方式：key-value的格式,每个键值对用逗号隔开，最后一个键值对不用写逗号
+dic1 = {"id": 1,
+        "name": "XiaoLang"
+        }
+dic2 = dict()
+#in 只是判定key是否存在，与value无关
+print("id" in dic1)
+print("id" not in dic1)
+#根据key获取value
+print(dic1["id"])
+#插入，修改
+dic1['score'] = 90
+print(dic1)
+dic1['score'] = 60
+print(dic1)
+#使用pop来删除键值对
+dic1.pop("score")
+print(dic1)
+#遍历操作
+for key in dic1:
+        print(key, dic1[key])
+
+for key, value in dic1.items():
+        print(key, value)
+
+#获取所有的key，所有的value，所有的键值对items
+print(dic1.keys())
+print(dic1.values())
+print(dic1.items())
