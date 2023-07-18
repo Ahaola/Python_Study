@@ -18,6 +18,7 @@
 '''
 这是一个文档字符串，也是一个注释
 '''
+from datetime import datetime
 import random
 
 # print(10/0)
@@ -297,11 +298,49 @@ import random
 # print(type(f))
 # f.close()
 
-flist = []
-count = 0
-while True:
-    f = open('D:/测试开发工程师！！/test.txt', 'r')
-    flist.append(f)
-    f.close()
-    count += 1
-    print(f'打开的文件个数为{count}个')
+# flist = []
+# count = 0
+# while True:
+#     f = open('D:/测试开发工程师！！/test.txt', 'r')
+#     flist.append(f)
+#     f.close()
+#     count += 1
+#     print(f'打开的文件个数为{count}个')
+
+#使用write进行写文件，使用w方式打开会清空文件中的所有内容
+# f = open('D:/测试开发工程师！！/test.txt', 'w')
+# f.write("hello\n")
+# f.close()
+
+#使用追加的方式进行写文件,这个时候使用a方式打开
+# f = open('D:/测试开发工程师！！/test.txt', 'a')
+# f.write("world")
+# f.close()
+#如果文件已经关闭，那么意味着系统中和该文件相关的资源已经释放，这个时候强行去写就会报异常
+# f = open('D:/测试开发工程师！！/test.txt', 'a')
+# f.close()
+# f.write("world")
+
+#使用read指定读取几个字符
+# f = open('D:/测试开发工程师！！/test.txt', 'r', encoding="utf8")
+# res = f.read(2)
+# print(res)
+# f.close()
+
+#文件按行读取,使用for循环的方法
+# f = open('D:/测试开发工程师！！/test.txt', 'r', encoding="utf8")
+# for line in f:
+#     #end参数表示每次打印要在末尾加上啥，空字符串表示什么也不加
+#     print(f'line={line}', end='')
+# f.close()
+
+#使用readlines方法直接将每一行读取出来，放到一个列表里面
+# f = open('D:/测试开发工程师！！/test.txt', 'r', encoding="utf8")
+# lines = f.readlines()
+# print(lines)
+# f.close()
+
+#时间转换器
+date1 = datetime(year=2002, month=7, day=19)
+date2 = datetime(year=2023, month=7, day=18)
+print(date2-date1)
