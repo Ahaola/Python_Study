@@ -19,5 +19,6 @@ driver.find_element(By.TAG_NAME,"input")
 # driver.find_element(By.XPATH,'//*[@id="kw"]')#使用Xpath定位元素注意使用单引号
 baidu = driver.find_element(By.CSS_SELECTOR,"#kw")
 baidu.send_keys("24秋招拿下！！")
-baidu.click(By.CSS_SELECTOR,'#su')
+baidu.click()
+sleep(2)
 driver.quit() #关闭浏览器
