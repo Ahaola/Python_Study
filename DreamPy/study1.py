@@ -1,4 +1,6 @@
 # print(1+2-3)
+# str1 = "hello world"
+# print(str1[-1:-4:-2])
 # avg = (34+23+345+12.7) / 4
 # print(avg)
 # sum = avg + 45
@@ -341,6 +343,44 @@ import random
 # f.close()
 
 #时间转换器
-date1 = datetime(year=2002, month=7, day=19)
-date2 = datetime(year=2023, month=7, day=18)
-print(date2-date1)
+# date1 = datetime(year=2002, month=7, day=19)
+# date2 = datetime(year=2023, month=7, day=18)
+# print(date2-date1)
+
+'''类和对象'''
+class Student:
+    name = None
+    age = None
+    sex = None
+    def __int__(self,name,age,sex):
+        self.name = name
+        self.age = age
+        self.sex = sex
+        print("Student类创建了一个对象！")
+stu = Student("zhansgan",19,"男")
+
+
+'''封装'''
+class fengzhuang:
+    name = None
+    tel = None
+    __haha_didi = None #私有成员变量 __ 开头
+    def __test1(self,name,tel,__haha_didi):
+        '''私有成员变量无法被对象访问，但是可以被其他私有成员访问'''
+        if self.__haha_didi > 10:
+            print("私有成员变量被访问到了！")
+
+'''继承'''
+class demo1:
+    id = None
+    def test1(self):
+        print("这是demo1类的方法")
+
+class demo2(demo1):
+    watch = None
+    id = "1"
+    def test2(self,watch,id):
+        print("重新命名id")
+    '''在子类中调用父类的/变量方法'''
+    demo1.test1()
+    super().test1()
