@@ -384,3 +384,30 @@ class demo2(demo1):
     '''在子类中调用父类的/变量方法'''
     demo1.test1()
     super().test1()
+
+'''
+系统内置的异常：
+ZeroDivisionError : 除以0的异常 1/0
+FileNotFoundError : 文件不存在异常
+FileExistsError : 多次创建同名的文件夹 文件重复报错
+ValueError : 数据值不对 转换不了值 比如 int('a')
+KeyError : 就是字典里面 键值不存在 或者输入错误
+SyntaxError : 报语法错误 比如 用了中文的括号或者逗号啥的
+IndexError : 脚标的错误，就是列表只有2个然后写 list1[5]
+'''
+
+#自定义异常
+class LengthException(Exception):
+    def __init__(self,a,b):
+        self.a = a
+        self.b = b
+    def __str__(self):
+        return "长度限制在{}到{}之间是合法的密码".format(self.a,self.b)
+
+password = input('请输入密码')
+a = 8
+b = 15
+if a <= len(password) <= b:
+    print("密码合法可以正常登录")
+else:
+    raise LengthException(a,b)
