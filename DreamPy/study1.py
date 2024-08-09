@@ -21,7 +21,7 @@
 这是一个文档字符串，也是一个注释
 '''
 from datetime import datetime
-import random
+import random1
 
 # print(10/0)
 # print(-7 // 2)
@@ -348,42 +348,53 @@ import random
 # print(date2-date1)
 
 '''类和对象'''
-class Student:
-    name = None
-    age = None
-    sex = None
-    def __int__(self,name,age,sex):
-        self.name = name
-        self.age = age
-        self.sex = sex
-        print("Student类创建了一个对象！")
-stu = Student("zhansgan",19,"男")
+# class Student:
+#     name = None
+#     age = None
+#     sex = None
+#     def __int__(self,name,age,sex):
+#         self.name = name
+#         self.age = age
+#         self.sex = sex
+#         print("Student类创建了一个对象！")
+# stu = Student("zhansgan",19,"男")
+#
+#
+# '''封装'''
+# class fengzhuang:
+#     name = None
+#     tel = None
+#     __haha_didi = None #私有成员变量 __ 开头
+#     def __test1(self,name,tel,__haha_didi):
+#         '''私有成员变量无法被对象访问，但是可以被其他私有成员访问'''
+#         if self.__haha_didi > 10:
+#             print("私有成员变量被访问到了！")
+#
+# '''继承'''
+# class demo1:
+#     id = None
+#     def test1(self):
+#         print("这是demo1类的方法")
+#
+# class demo2(demo1):
+#     watch = None
+#     id = "1"
+#     def test2(self,watch,id):
+#         print("重新命名id")
+#     '''在子类中调用父类的/变量方法'''
+#     demo1.test1()
+#     super().test1()
 
 
-'''封装'''
-class fengzhuang:
-    name = None
-    tel = None
-    __haha_didi = None #私有成员变量 __ 开头
-    def __test1(self,name,tel,__haha_didi):
-        '''私有成员变量无法被对象访问，但是可以被其他私有成员访问'''
-        if self.__haha_didi > 10:
-            print("私有成员变量被访问到了！")
+# for i in range(5):
+#     print(i, end='')
 
-'''继承'''
-class demo1:
-    id = None
-    def test1(self):
-        print("这是demo1类的方法")
+list1 = [1, 'hello', 'world']
+list2 = [2, 'dodo', 'haha']
 
-class demo2(demo1):
-    watch = None
-    id = "1"
-    def test2(self,watch,id):
-        print("重新命名id")
-    '''在子类中调用父类的/变量方法'''
-    demo1.test1()
-    super().test1()
+list2.extend(list1)
+print(list2)
+
 
 '''
 系统内置的异常：
